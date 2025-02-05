@@ -78,11 +78,11 @@ window.onload = () => {
 };
 
 function getPrayerTimesOfCitie(city) {
-  axios
-    .get("https://api.aladhan.com/v1/timingsByCity?country=DZ&city=" + city)
+  fetch("https://api.aladhan.com/v1/timingsByCity?country=DZ&city=" + city)
+    .then((response) => response.json())
     .then((response) => {
-      // console.log(response.data.data.date);
-      let time = response.data.data.timings;
+      console.log(response.data.timings);
+      let time = response.data.timings;
 
       document.querySelector(".Asr").innerHTML = time.Asr;
       document.querySelector(".Dhuhr").innerHTML = time.Dhuhr;
@@ -93,8 +93,25 @@ function getPrayerTimesOfCitie(city) {
 
       document.querySelector("#city-name").innerHTML =
         select.options[select.selectedIndex].text;
-    })
-    .catch((error) => {
-      console.error(error);
     });
+
+  // axios
+  //   .get("https://api.aladhan.com/v1/timingsByCity?country=DZ&city=" + city)
+  //   .then((response) => {
+  //     // console.log(response.data.data.date);
+  //     let time = response.data.data.timings;
+
+  //     document.querySelector(".Asr").innerHTML = time.Asr;
+  //     document.querySelector(".Dhuhr").innerHTML = time.Dhuhr;
+  //     document.querySelector(".Fajr").innerHTML = time.Fajr;
+  //     document.querySelector(".Isha").innerHTML = time.Isha;
+  //     document.querySelector(".Maghrib").innerHTML = time.Maghrib;
+  //     document.querySelector(".Sunrise").innerHTML = time.Sunrise;
+
+  //     document.querySelector("#city-name").innerHTML =
+  //       select.options[select.selectedIndex].text;
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
 }

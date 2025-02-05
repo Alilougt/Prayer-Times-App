@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Times App</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Familly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Start city and time   -->
+      <div class="city-and-time">
+        <div class="time-date">
+          <span id="date">2025 فيفري 4</span> | <span id="time">11.03</span>
+        </div>
+        <div class="city">
+          <h3 id="city-name"></h3>
+        </div>
+      </div>
+      <!-- End city and time   -->
+      <hr />
+      <div class="prayers-times">
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/one.jpg" alt="elfajer" /></div>
+          <h3>الفجر</h3>
+          <p class="Fajr">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/two.jpg" alt="elfajer" /></div>
+          <h3>الشروق</h3>
+          <p class="Sunrise">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/four.jpg" alt="elfajer" /></div>
+          <h3>الظهر</h3>
+          <p class="Dhuhr">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/five.jpg" alt="elfajer" /></div>
+          <h3>العصر</h3>
+          <p class="Asr">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/three.jpg" alt="elfajer" /></div>
+          <h3>المغرب</h3>
+          <p class="Maghrib">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+        <!-- start time of prayer -->
+        <div class="time-of-prayer">
+          <div class="image"><img src="images/six.jpg" alt="elfajer" /></div>
+          <h3>العشاء</h3>
+          <p class="Isha">6:26</p>
+        </div>
+        <!-- end time of prayer -->
+
+        <!-- choose a city -->
+      </div>
+      <div class="select-city">
+        <select name="city-select" id=""></select>
+      </div>
+    </div>
+  </body>
+  <script src="/node_modules/axios/dist/axios.js"></script>
+  <script src="/main.js"></script>
+</html>
